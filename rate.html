@@ -1,0 +1,19 @@
+<!doctype html>
+<body>
+	<h1>2017년 인연을 만날 확률을 알아봅시다.</h1>
+	<input type = "text" id = "mensName" placeholder="이름을 입력하세요.">
+	<button id="action">확인하기</button>
+<script>
+	action.onclick = function(){
+		var myName = mensName.value;
+		matchingRate(myName);
+	}
+
+	function matchingRate(mensName){
+		var mensRate = Math.round(Math.random() * 100);
+		var Text = "올해 " + mensName + "님의 인연을 만날 확률은 " + mensRate + "%입니다."
+		console.log(Text);
+	}
+
+</script>
+</body>
