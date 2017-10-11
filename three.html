@@ -1,84 +1,109 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>three.js webgl - arraycamera</title>
-		<meta charset=utf-8>
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0px;
-				background-color: #000000;
-				overflow: hidden; }
-		</style>
-	</head>
-	<body>
-		<script src="js/three.js"></script>
-		<script>
-			
-			
-			var camera, scene, renderer;
-			var mesh;
-			init();
-			animate();
-			function init() {
-				var AMOUNT = 6;
-				var SIZE = 1 / AMOUNT;
-				var ASPECT_RATIO = window.innerWidth / window.innerHeight;
-				var cameras = [];
-				for ( var y = 0; y < AMOUNT; y ++ ) {
-					for ( var x = 0; x < AMOUNT; x ++ ) {
-						var subcamera = new THREE.PerspectiveCamera( 40, ASPECT_RATIO, 0.1, 10 );
-						subcamera.bounds = new THREE.Vector4( x / AMOUNT, y / AMOUNT, SIZE, SIZE );
-						subcamera.position.x = ( x / AMOUNT ) - 0.5;
-						subcamera.position.y = 0.5 - ( y / AMOUNT );
-						subcamera.position.z = 1.5;
-						subcamera.position.multiplyScalar( 2 );
-						subcamera.lookAt( new THREE.Vector3() );
-						subcamera.updateMatrixWorld();
-						cameras.push( subcamera );
-					}
-				}
-				camera = new THREE.ArrayCamera( cameras );
-				camera.position.z = 3;
-				scene = new THREE.Scene();
-				scene.add( new THREE.AmbientLight( 0x222244 ) );
-				var light = new THREE.DirectionalLight();
-				light.position.set( 0.5, 0.5, 1 );
-				light.castShadow = true;
-				light.shadow.camera.zoom = 4; // tighter shadow map
-				scene.add( light );
-				var geometry = new THREE.PlaneBufferGeometry( 100, 100 );
-				var material = new THREE.MeshPhongMaterial( { color: 0x000066 } );
-				var background = new THREE.Mesh( geometry, material );
-				background.receiveShadow = true;
-				background.position.set( 0, 0, - 1 );
-				scene.add( background );
-				var geometry = new THREE.CylinderBufferGeometry( 0.5, 0.5, 1, 32 );
-				var material = new THREE.MeshPhongMaterial( { color: 0xff0000 } );
-				mesh = new THREE.Mesh( geometry, material );
-				mesh.castShadow = true;
-				mesh.receiveShadow = true;
-				scene.add( mesh );
-				renderer = new THREE.WebGLRenderer();
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				renderer.shadowMap.enabled = true;
-				document.body.appendChild( renderer.domElement );
-				//
-				window.addEventListener( 'resize', onWindowResize, false );
-			}
-			function onWindowResize() {
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-				renderer.setSize( window.innerWidth, window.innerHeight );
-			}
-			function animate() {
-				mesh.rotation.x += 0.005;
-				mesh.rotation.z += 0.01;
-				renderer.render( scene, camera );
-				requestAnimationFrame( animate );
-			}
+<meta charset="utf-8">
+<style>
 
-		</script>
-	</body>
-</html>
+body {
+  margin: 0;
+}
+
+svg {
+  font: 10px sans-serif;
+  border: solid 1px #ccc;
+  margin-bottom: 10px;
+}
+
+</style>
+<svg style="position:absolute;top:-1000px;">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#000"></path>
+    </marker>
+  </defs>
+</svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var A = {type: "Polygon", coordinates: [[[0, 0], [10, 0], [10, 10], [0, 10], [0, 0]]]},
+    B = {type: "Polygon", coordinates: [A.coordinates[0].slice().reverse()]};
+
+</script>
+<script>
+
+var path = d3.geoPath(d3.geoOrthographic().rotate([-20, -20]).precision(0.1));
+
+var svg = d3.select("body").selectAll()
+  .data([A, B])
+  .enter().append("svg")
+    .attr("width", 958)
+    .attr("height", 500);
+
+svg.append("path")
+    .attr("fill", "none")
+    .attr("stroke", "#000")
+    .attr("d", path(d3.geoGraticule10()));
+
+svg.append("path")
+    .attr("fill", "red")
+    .attr("fill-opacity", 0.5)
+    .attr("d", path);
+
+svg.append("path")
+    .attr("fill", "none")
+    .attr("stroke", "#000")
+    .attr("marker-mid", "url(#arrow)")
+    .attr("marker-end", "url(#arrow)")
+    .attr("d", function(d) { return path({type: "LineString", coordinates: d.coordinates[0]}); });
+
+svg.append("path")
+    .attr("fill", "none")
+    .attr("stroke", "#000")
+    .attr("d", path({type: "Sphere"}));
+
+svg.append("text")
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("dy", "0.71em")
+    .text(function(d) { return "ring = " + JSON.stringify(d.coordinates[0]); });
+
+svg.append("text")
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("dy", "2em")
+    .text(function(d) { return "area = " + d3.geoArea(d); });
+
+</script>
+<script>
+
+var path = d3.geoPath(d3.geoIdentity().translate([480 - 50, 250 - 50]).scale(10));
+
+var svg = d3.select("body").selectAll()
+  .data([A, B])
+  .enter().append("svg")
+    .attr("width", 958)
+    .attr("height", 500);
+
+svg.append("path")
+    .attr("fill", "red")
+    .attr("fill-opacity", 0.5)
+    .attr("d", path);
+
+svg.append("path")
+    .attr("fill", "none")
+    .attr("stroke", "#000")
+    .attr("marker-mid", "url(#arrow)")
+    .attr("marker-end", "url(#arrow)")
+    .attr("d", function(d) { return path({type: "LineString", coordinates: d.coordinates[0]}); });
+
+svg.append("text")
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("dy", "0.71em")
+    .text(function(d) { return "ring = " + JSON.stringify(d.coordinates[0]); });
+
+svg.append("text")
+    .attr("x", 10)
+    .attr("y", 10)
+    .attr("dy", "2em")
+    .text(function(d) { return "area = " + path.area(d); });
+
+</script>
