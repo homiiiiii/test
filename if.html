@@ -1,0 +1,140 @@
+<idoctype html>
+<head>
+	<meta charset = " utf-8" >
+	<link href='normalize.css' rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel="stylesheet" type='text/css'>
+	<style>
+		html {font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		.section{height:800px; width:100%; position:relative;}
+		header{height:250px; background: #333; width:100%; fill:80%; word-break: keep-all;}
+		header #logo{width:200px; text-align: center; height: 80px; top: 10px; font-size: 2em; font-weight: 500; position: relative; transition: all 1s; color: white; left:calc(50% - 100px);}
+		header #menu{width:700px; height:100px; position: relative; transition: all 1s; left:calc(55% - 350px); }
+		header li{width:85px;height:40px; fill:0%;float:left ; border-radius: 50px ;text-align: center;line-height: 40px;color:black;font-size: 1.2em;font-weight: 500;margin-left: 20px;margin-right:20px; color: #333;}
+		h1{color:white; font-size: 3em; text-align: center; padding-top:280px; padding-left: 100px; padding-right: 100px; text-decoration: none;}
+		a{width: 100%; display: text; font-size: 1em; text-align: center; font-weight: 500; line-height: 40px; text-decoration: none; margin: 20px; transition: opacity 0.5s;-webkit-transition: opacity 0.5s; }
+		#sectionA{ background: url('./if.jpg'); transition: all 1s; background-size:100% auto;background-position: 0px -120px; }
+		#sectionB{ background: #F5F5F5; transition: all 1s; }
+		#sectionC{ background: url('./feel.gif') ;transition: all 1s; background-size:100% auto; }
+		#sectionD{ background: #F5F5F5; transition: all 3s; }
+		#sectionE{ background: #F5F5F5; transition: all 1s; }
+
+		#titleA{transition: all 1s;}
+		#titleB{transition: all 1s;}
+		#titleC{transition: all 1s;}
+		#titleD{transition: all 1s;}
+		#titleE{transition: all 1s;}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<div id="logo">How R U ?</div>
+		<div id="menu">
+			<ul>
+				<li id="menuA">시간</li>
+				<li id="menuB">날씨</li>
+				<li id="menuC">기분</li>
+				<li id="menuD">화이팅</li>
+				<li id="menuE">conference</li>
+			</ul>
+		</div>	
+	</header>
+	<div class="section" id="sectionA">
+		<h1 id="titleA"></h1>
+	</div>
+	<div class="section" id="sectionB">
+		<h1 id="titleB" style="color:black">오늘 날씨는?</h1>
+	</div>
+	<div class="section" id="sectionC">
+		<h1 id="titleC" >오늘 기분은?</h1>
+	</div>
+	<div class="section" id="sectionD">
+		<h1 id="titleD">화이팅!</h1>
+	</div>
+	<div class="section" id="sectionE">
+		<h1 id="titleE" style= "line-height: 60px; color:black">제 사이트를 소개합니다.
+		<ul>
+			<li><a href="http://blog.naver.com/bhe1121">네이버블로그</a></li>
+			<li><a href="http://hi2bune1.cafe24.com/hosting_index.html">동아리 블로그</a></li>
+			<li><a href="https://www.facebook.com/profile.php?id=100005621836642">페이스북</a></li>
+		</ul>
+
+	</div>
+</body>
+<script>
+	document.getElementById("titleA").innerHTML = Date();
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "44px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "700px";
+			menu.style.top = "-70px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 100px)";
+			menu.style.left = "calc(55% - 350px)";
+			menu.style.top = "30px";
+			sectionA.style.marginTop = "0px";
+
+		}
+
+		if(scrollH > 100){
+			titleA.style.paddingTop = "500px";
+			sectionA.style.backgroundAttachment = "fixed";
+			menuA.style.color = "white";
+		}else{
+			titleA.style.paddingTop = "280px";
+			sectionA.style.backgroundAttachment = "scroll";
+			menuA.style.color = "gray";
+		}
+
+		if(scrollH > 680){
+			titleB.style.paddingTop = "500px";
+			titleB.style.transform = "rotateY(180deg)";
+			menuB.style.color = "white";;
+		}else{
+			titleB.style.paddingTop = "280px";
+			titleB.style.transform = "rotateY(0deg)";
+			titleB.style.fill = "0%";
+			menuB.style.color  = "gray";
+		}
+
+		if(scrollH > 1100){
+			sectionC.style.backgroundAttachment = "fixed";
+			titleC.style.paddingTop = "500px";
+			menuC.style.color = "white";
+		}else{
+			sectionA.style.backgroundAttachment = "scroll";
+			titleC.style.paddingTop = "280px";
+			menuC.style.color = "gray";
+		}
+
+		if(scrollH > 1816){
+			sectionD.style.background = "black";
+			titleD.style.color = "white";
+			menuD.style.color = "white";
+		}else{
+			sectionD.style.background = "white";
+			titleD.style.color = "black";
+			menuD.style.color = "gray";
+		}
+
+		if(scrollH > 2400){
+			titleE.style.fontSize = "1.5em";
+			titleE.style.fontWeight = "700";
+			menuE.style.color = "white";
+		}else{
+			titleE.style.fontSize = "3em";
+			titleE.style.fontWeight = "200";
+			menuE.style.color = "gray";
+		}
+
+	}
+</script>
