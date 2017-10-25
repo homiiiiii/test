@@ -1,22 +1,22 @@
 <idoctype html>
 <head>
-	<meta charset = " utf-8" >
+	<meta charset = "utf-8">
 	<link href='normalize.css' rel="stylesheet">
-	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel="stylesheet" type='text/css'>
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 	<style>
-		html {font-family: 'Spoqa Han Sans'; font-weight: 200;}
-		.section{height:800px; width:100%; position:relative;}
-		header{height:250px; background: #333; width:100%; fill:80%; word-break: keep-all;}
-		header #logo{width:200px; text-align: center; height: 80px; top: 10px; font-size: 2em; font-weight: 500; position: relative; transition: all 1s; color: white; left:calc(50% - 100px);}
-		header #menu{width:700px; height:100px; position: relative; transition: all 1s; left:calc(55% - 350px); }
-		header li{width:85px;height:40px; fill:0%;float:left ; border-radius: 50px ;text-align: center;line-height: 40px;color:black;font-size: 1.2em;font-weight: 500;margin-left: 20px;margin-right:20px; color: #333;}
-		h1{color:white; font-size: 3em; text-align: center; padding-top:280px; padding-left: 100px; padding-right: 100px; text-decoration: none;}
-		a{width: 100%; display: text; font-size: 1em; text-align: center; font-weight: 500; line-height: 40px; text-decoration: none; margin: 20px; transition: opacity 0.5s;-webkit-transition: opacity 0.5s; }
-		#sectionA{ background: url('./if.jpg'); transition: all 1s; background-size:100% auto;background-position: 0px -120px; }
-		#sectionB{ background: #F5F5F5; transition: all 1s; }
-		#sectionC{ background: url('./feel.gif') ;transition: all 1s; background-size:100% auto; }
-		#sectionD{ background: #F5F5F5; transition: all 3s; }
-		#sectionE{ background: #F5F5F5; transition: all 1s; }
+		html { font-family: 'Spoqa Han Sans'; font-weight: 200; }
+		.section{height:900px;width:100%;position: relative}
+		header{height:300px; background: black;width:100%; transition: all 0.3s}
+		header #logo{width:300px;position:relative;left:calc(50% - 100px);transition: all 0.3s; }
+		header img{ width: 78%; margin-top: 10px; }
+		header #menu{width:700px;height:80px;font-size: 1em; position:relative;border-radius: 50px;left:calc(50% - 350px);transition: all 0.3s}
+		header li{width:100px;height:30px;color:white;background: none;float:left;text-align: center;line-height: 30px;font-size: 1em;margin-left: 20px;margin-right:20px;}
+		h1{color:black;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		#sectionA{ background: url('./main.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#sectionB{ background: url('./01.png');background-size:33% auto;background-position: center; background-repeat: no-repeat;  }
+		#sectionC{ background: url('./02.png');background-size:22% auto;background-position: 57% 70%; background-repeat: no-repeat }
+		#sectionD{ background: url('./03.png');background-size:24% auto;background-position: 52% 70%;background-repeat: no-repeat }
+		#sectionE{ background: url('./04.gif');background-size:75% auto;background-position: 70% 90%; background-repeat: no-repeat}
 
 		#titleA{transition: all 1s;}
 		#titleB{transition: all 1s;}
@@ -26,51 +26,46 @@
 	</style>
 </head>
 <body>
-	<header id="header">
-		<div id="logo">How R U ?</div>
-		<div id="menu">
-			<ul>
-				<li id="menuA">시간</li>
-				<li id="menuB">날씨</li>
-				<li id="menuC">기분</li>
-				<li id="menuD">화이팅</li>
-				<li id="menuE">conference</li>
-			</ul>
-		</div>	
-	</header>
-	<div class="section" id="sectionA">
-		<h1 id="titleA"></h1>
-	</div>
-	<div class="section" id="sectionB">
-		<h1 id="titleB" style="color:black">오늘 날씨는?</h1>
-	</div>
-	<div class="section" id="sectionC">
-		<h1 id="titleC" >오늘 기분은?</h1>
-	</div>
-	<div class="section" id="sectionD">
-		<h1 id="titleD">화이팅!</h1>
-	</div>
-	<div class="section" id="sectionE">
-		<h1 id="titleE" style= "line-height: 60px; color:black">제 사이트를 소개합니다.
+<header id="header">
+	<div id="logo"><img src='./logo.png'></div>
+	<div id="menu">
 		<ul>
-			<li><a href="http://blog.naver.com/bhe1121">네이버블로그</a></li>
-			<li><a href="http://hi2bune1.cafe24.com/hosting_index.html">동아리</a></li>
-			<li><a href="https://www.facebook.com/profile.php?id=100005621836642">페이스북</a></li>
+			<li id="menuA">Start</li>
+			<li id="menuB">wake up!</li>
+			<li id="menuC">hard working</li>
+			<li id="menuD">poor dress</li>
+			<li id="menuE">change!</li>
 		</ul>
-
 	</div>
-</body>
+</header>
+<div class="section" id="sectionA">
+	<h1 id="titleA"></h1>
+</div>
+<div class="section" id="sectionB">
+	<h1 id="titleB"></h1>
+</div>
+<div class="section" id="sectionC">
+	<h1 id="titleC"></h1>
+</div>
+<div class="section" id="sectionD">
+	<h1 id="titleD"></h1>
+</div>
+<div class="section" id="sectionE">
+	<h1 id="titleE"></h1>
+</div>
+<div class="section">
+	<h1 style="color:black"></h1>
+</div>
 <script>
-	document.getElementById("titleA").innerHTML = Date();
 	window.onscroll = function(){
 		console.log(document.body.scrollTop);
 		var scrollH = document.body.scrollTop;
-		if(scrollH > 50){
-			header.style.height = "44px";
+		if(scrollH > 40){
+			header.style.height = "48px";
 			header.style.position = "fixed";
 			header.style.top = "0px";
 			header.style.zIndex = "9999";
-			menu.style.left = "700px";
+			menu.style.left = "400px";
 			menu.style.top = "-70px";
 			logo.style.left = "0px";
 			sectionA.style.marginTop = "44px";
@@ -79,62 +74,64 @@
 			header.style.position = "relative";
 			header.style.top = "0px";
 			logo.style.left = "calc(50% - 100px)";
-			menu.style.left = "calc(55% - 350px)";
-			menu.style.top = "30px";
+			menu.style.left = "calc(50% - 350px)";
+			menu.style.top = "80px";
 			sectionA.style.marginTop = "0px";
 
 		}
 
-		if(scrollH > 100){
-			titleA.style.paddingTop = "500px";
+		if(scrollH > 280){
 			sectionA.style.backgroundAttachment = "fixed";
-			menuA.style.color = "white";
-		}else{
 			titleA.style.paddingTop = "280px";
+			menuA.style.background = "orange";
+		}else{
 			sectionA.style.backgroundAttachment = "scroll";
-			menuA.style.color = "gray";
+			titleA.style.paddingTop = "280px";
+			menuA.style.background = "black";
 		}
 
 		if(scrollH > 680){
+			sectionB.style.backgroundAttachment = "fixed";
 			titleB.style.paddingTop = "500px";
 			titleB.style.transform = "rotateY(180deg)";
-			menuB.style.color = "white";;
+			menuB.style.background = "orange";
 		}else{
+			sectionB.style.backgroundAttachment = "scroll";
 			titleB.style.paddingTop = "280px";
 			titleB.style.transform = "rotateY(0deg)";
-			titleB.style.fill = "0%";
-			menuB.style.color  = "gray";
+			menuB.style.background = "black";
 		}
 
-		if(scrollH > 1100){
+		if(scrollH > 1198){
 			sectionC.style.backgroundAttachment = "fixed";
-			titleC.style.paddingTop = "500px";
-			menuC.style.color = "white";
+			menuC.style.background = "orange";
 		}else{
-			sectionA.style.backgroundAttachment = "scroll";
-			titleC.style.paddingTop = "280px";
-			menuC.style.color = "gray";
+			sectionC.style.backgroundAttachment = "scroll";
+			menuC.style.background = "black";
 		}
 
 		if(scrollH > 1816){
-			sectionD.style.background = "black";
-			titleD.style.color = "white";
-			menuD.style.color = "white";
-		}else{
-			sectionD.style.background = "white";
+			sectionD.style.backgroundAttachment = "fixed";
 			titleD.style.color = "black";
-			menuD.style.color = "gray";
+			menuD.style.background = "orange";
+		}else{
+			sectionD.style.backgroundAttachment = "scroll";
+			titleD.style.color = "black";
+			menuD.style.background = "black";
 		}
 
 		if(scrollH > 2400){
+			sectionE.style.backgroundAttachment = "fixed";
 			titleE.style.fontSize = "1.5em";
 			titleE.style.fontWeight = "700";
-			menuE.style.color = "white";
+			menuE.style.background = "orange";
 		}else{
+			sectionE.style.backgroundAttachment = "scroll";
 			titleE.style.fontSize = "3em";
 			titleE.style.fontWeight = "200";
-			menuE.style.color = "gray";
+			menuE.style.background = "black";
 		}
 
 	}
 </script>
+</body>
