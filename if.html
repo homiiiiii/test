@@ -1,3 +1,4 @@
+
 <idoctype html>
 <head>
 	<meta charset = "utf-8">
@@ -10,10 +11,11 @@
 		font-weight: 200; }
 		.section{
 			height:900px;
-			width:100%;
-			position: relative}
+			position: relative; 
+			margin:0 auto;
+			padding: 0;}
 		header{
-			height:300px; 
+			height:900px; 
 			background: black;
 			width:100%; 
 			transition: all 0.3s}
@@ -31,13 +33,16 @@
 			font-size: 1em;
 			position:relative;
 			border-radius: 50px;
-			left:calc(50% - 350px);
+			left:calc(50% - 80px);
 			transition: all 0.3s;
-			margin-top: 100px; }
+			margin-top: 100px; 
+			cursor:pointer;}
+		header #menu li:hover{
+			color: #8684D8}
 		header li{
 			font-family: 'Droid Serif', serif;
-			width:10%;
-			height:30px;
+			width:15%;
+			height:100px;
 			color:#DAA520;
 			background: none;
 			float:left;
@@ -45,60 +50,108 @@
 			line-height: 30px;
 			font-size: 1.5em;
 			font-weight: 500;
-			margin-left: 15px;
-			margin-right:700px;
+			margin-left: 0px;
+			margin-right:850px;
 			transition: all 0.5s;}
 		h1{
 			color:black;
 			font-size: 3em;
-			text-align: center;
 			padding-top:280px; 
 			line-height: 1.2;
 			padding-left: 100px;
 			padding-right: 100px;
 			letter-spacing: -1px;}
+
+		.balloon{ 
+			width:70px; height:400px; 
+			/*background: url('./green.png');*/
+			/*background-size:100% auto;*/
+			background-repeat:no-repeat;
+			animation: bMove 8s linear;
+		}
+		@keyframes bMove{
+			0%{ background-position: 0 300px; opacity:0;}
+			30%{opacity:0;}
+			40%{opacity:1;}
+			80%{ opacity:1;}
+			100%{ background-position:0 0;opacity:0;}
+		}
+
+
 		#sectionA{ 
 			background: url('./main.jpg');
-			background-size:100% auto;
-			background-position: 0px -120px;
-			background-repeat: no-repeat; }
-		#sectionB{ 
-			background: url('./01.png');
-			background-size:33% auto;
-			background-position: center; 
-			background-repeat: no-repeat;  }
+			background-size: 100% auto ;
+			background-position: center;
+			background-repeat: no-repeat;}
+		#sectionB{
+			background: url('./011b.png');
+			background-size:100% auto ; 
+			background-repeat: no-repeat;
+			margin: 0 auto; 
+			padding:0;
+			transition: all 3s;}
 		#sectionC{ 
-			background: url('./02.png');
-			background-size:22% auto;
-			background-position: 57% 70%; 
-			background-repeat: no-repeat }
+			background: url('./021b.png');
+			background-size:100% auto ; 
+			background-repeat: no-repeat;
+			margin: 0 auto; 
+			padding-top:100px;
+			transition: all 1s;}
+
 		#sectionD{ 
-			background: url('./03.png');
-			background-size:24% auto;
-			background-position: 52% 70%;
-			background-repeat: no-repeat }
+			background: url('./031b.png');
+			background-size:100% auto ; 
+			background-repeat: no-repeat;
+			transition: all 4s;}
+		#bg3{
+			width:200px;
+			padding:0; 
+			margin: 100 -100px;
+			position: relative;
+			transition: all 4s;
+		}
+		#bg4{
+			width:300px; 
+			padding:0; 
+			margin: -500 780px;
+			position: relative;
+			transition: all 4s;}
 		#sectionE{ 
 			background: url('./04.gif');
-			background-size:75% auto;
-			background-position: 70% 90%; 
-			background-repeat: no-repeat}
+			background-size:100% auto ; 
+			background-repeat: no-repeat;
+			margin: 0 auto; 
+			padding:0;
+			transition: all 1s;}
+		#sectionF{
+			background: url('./05.gif');
+			background-size:100% auto ; 
+			background-repeat: no-repeat;
+			margin: 0 auto; 
+			padding:0;
+			transition: all 1s;}
+		}
 		#titleA{transition: all 1s;}
 		#titleB{transition: all 1s;}
 		#titleC{transition: all 1s;}
-		#titleD{transition: all 1s;}
-		#titleE{transition: all 1s;}
+		#titleD{transition: all 4s;}
+		#titleE{transition: all 4s;}
+		#titleF{transition: all 2s;}
 	</style>
 </head>
 <body>
+<audio autoplay loop preload id="myaudio">
+  <source src="bibidi.M4A">
+ </audio>
 <header id="header">
 	<div id="logo"><img src='./logo.png'></div>
 	<div id="menu">
 		<ul>
-			<li id="menuA">Start</li>
-			<li id="menuB">wake up!</li>
-			<li id="menuC">hard working</li>
-			<li id="menuD">poor dress</li>
-			<li id="menuE">change!</li>
+			<li id="menuA">Long ago</li>
+			<li id="menuB">Wake up!</li>
+			<li id="menuC">Hard working</li>
+			<li id="menuD">A ruined dress</li>
+			<li id="menuE">Change!</li>
 		</ul>
 	</div>
 </header>
@@ -106,34 +159,76 @@
 	<h1 id="titleA"></h1>
 </div>
 <div class="section" id="sectionB">
+	<div id="bg">
+		<img src="./011.png" style=" padding:0; margin: 0;"></div>
+	<div id="bg1">
+		<img src="./0111.png" style=" padding:0; margin: 0;"></div>
 	<h1 id="titleB"></h1>
 </div>
 <div class="section" id="sectionC">
-	<h1 id="titleC"></h1>
+	<h1 id="titleC">
+		<div id="bg2">
+			<img src="./02.png" style="background: red; padding:0; margin: 0;"></div>
+	</h1>
 </div>
 <div class="section" id="sectionD">
-	<h1 id="titleD"></h1>
+	<h1 id="titleD">
+		<div id="bg3">
+			<img src="./mother.png"></div>
+		<div id="bg4">
+			<img src="./sister.png"></div>
+	</h1>
 </div>
 <div class="section" id="sectionE">
-	<h1 id="titleE"></h1>
+	<h1  " id="titleE" style="color:white; padding-left:calc(100% - 600px);">Bibbidi-Bobbidi-Boo</h1>
 </div>
-<div class="section">
-	<h1 style="color:black"></h1>
+<div class="section" id="sectionF">
+	<h1 id="titleF" style="padding-left:calc(100% - 600px);">Happy dancing party!</h1>
 </div>
 <script>
+	setInterval(attachBalloon,1000);
+
+	function attachBalloon(){
+		var t = document.createElement("div"); 
+		t.setAttribute("class","balloon"); 
+		t.style.position = "absolute";
+		t.style.background = "url('./green_" + randomBH(1,4) + ".png') no-repeat";
+		t.style.backgroundSize = "100% auto";
+		t.style.top = randomBH(0,window.innerHeight) + "px";
+		t.style.left = randomBH(0,window.innerWidth) + "px";
+		t.addEventListener("animationend",remove);
+		document.body.appendChild(t); 
+	}
+	function remove(){
+		var t = event.target; 
+		t.parentNode.removeChild(t); 
+		}
+	function randomBH(min, max) {
+  		min = Math.ceil(min);
+  		max = Math.floor(max);
+  		return Math.floor(Math.random() * (max - min + 1)) + min;
+  	}
+	</script>
+
+<script>
+	var audio = document.getElementById("myaudio");
+  	audio.volume = 0.3;
+  	
+
 	window.onscroll = function(){
 		console.log(document.body.scrollTop);
 		var scrollH = document.body.scrollTop;
-		if(scrollH > 40){
+		if(scrollH > 50){
 			header.style.height = "0px";
 			header.style.position = "fixed";
 			header.style.top = "0px";
 			header.style.zIndex = "9999";
-			menu.style.left = "400px";
+			menu.style.left = "30px";
 			menu.style.top = "0px";
 			menu.style.opacity = "1";
 			logo.style.left = "10px";
 			sectionA.style.marginTop = "100px";
+			sectionA.style.background = "1";
 		}else{
 			header.style.height = "900px";
 			header.style.position = "relative";
@@ -141,53 +236,61 @@
 			logo.style.left = "calc(50% - 100px)";
 			menu.style.left = "calc(50% - 100px)";
 			sectionA.style.marginTop = "0px";
+			sectionA.style.background = "0.2";
 		}
 		if(scrollH > 280){
 			sectionA.style.backgroundAttachment = "fixed";
-			titleA.style.paddingTop = "280px";
-			menuA.style.background = "orange";
+			menuA.style.fontSize = "2em";
 		}else{
-			sectionA.style.backgroundAttachment = "scroll";
-			titleA.style.paddingTop = "280px";
-			menuA.style.background = "black";
+			menuA.style.fontSize = "1.5em";
 		}
-		if(scrollH > 680){
+		if(scrollH > 640){
 			sectionB.style.backgroundAttachment = "fixed";
-			titleB.style.paddingTop = "500px";
-			titleB.style.transform = "rotateY(180deg)";
-			menuB.style.background = "orange";
+			menuB.style.fontSize = "2em";
 		}else{
 			sectionB.style.backgroundAttachment = "scroll";
-			titleB.style.paddingTop = "280px";
-			titleB.style.transform = "rotateY(0deg)";
-			menuB.style.background = "black";
+			menuB.style.fontSize = "1.5em";
 		}
-		if(scrollH > 1198){
+		if(scrollH > 1200){
 			sectionC.style.backgroundAttachment = "fixed";
-			menuC.style.background = "orange";
+			bg2.style.position = "fixed";
+			menuC.style.fontSize = "2em";
 		}else{
 			sectionC.style.backgroundAttachment = "scroll";
-			menuC.style.background = "black";
+			menuC.style.fontSize = "1.5em";
 		}
-		if(scrollH > 1816){
+		if(scrollH > 2300){
 			sectionD.style.backgroundAttachment = "fixed";
+			bg3.style.paddingLeft ="400px";
+			bg4.style.paddingLeft ="0px";
 			titleD.style.color = "black";
-			menuD.style.background = "orange";
+			menuD.style.fontSize = "2em";
+;
 		}else{
 			sectionD.style.backgroundAttachment = "scroll";
+			bg3.style.paddingLeft ="40px";
+			bg4.style.paddingLeft ="1500px";
 			titleD.style.color = "black";
-			menuD.style.background = "black";
+			menuD.style.fontSize = "1.5em";
 		}
-		if(scrollH > 2400){
+		if(scrollH > 3200){
 			sectionE.style.backgroundAttachment = "fixed";
-			titleE.style.fontSize = "1.5em";
-			titleE.style.fontWeight = "700";
-			menuE.style.background = "orange";
+			menuE.style.fontSize = "2em";
+			titleE.style.opacity = "1";
+			
 		}else{
 			sectionE.style.backgroundAttachment = "scroll";
-			titleE.style.fontSize = "3em";
-			titleE.style.fontWeight = "200";
-			menuE.style.background = "black";
+			menuE.style.fontSize = "1.5em";
+			titleE.style.opacity = "0";
+		}
+		if(scrollH > 4200){
+			sectionE.style.backgroundAttachment = "fixed";
+			titleF.style.fontWeight = "700";
+			titleF.style.color = "white";
+		}else{
+			sectionE.style.backgroundAttachment = "scroll";
+			titleF.style.fontWeight = "200";
+			titleF.style.color = "black";
 		}
 	}
 </script>
