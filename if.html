@@ -85,10 +85,11 @@
 			background-repeat: no-repeat;}
 		#sectionB{
 			background: url('./011b.png');
-			background-size:100% auto ; 
+			background-size:100%; 
 			background-repeat: no-repeat;
-			margin: 0 auto; 
-			padding:0;
+			position: relative;
+			margin-top: 0px ; 
+			padding-top: 0px;
 			transition: all 3s;}
 		#sectionC{ 
 			background: url('./021b.png');
@@ -104,16 +105,16 @@
 			background-repeat: no-repeat;
 			transition: all 4s;}
 		#bg3{
-			width:200px;
+			width:500px;
 			padding:0; 
-			margin: 100 -100px;
+			margin: 240 -100px;
 			position: relative;
 			transition: all 4s;
 		}
 		#bg4{
 			width:300px; 
 			padding:0; 
-			margin: -500 780px;
+			margin: -550 780px;
 			position: relative;
 			transition: all 4s;}
 		#sectionE{ 
@@ -262,15 +263,13 @@
 		if(scrollH > 2300){
 			sectionD.style.backgroundAttachment = "fixed";
 			bg3.style.paddingLeft ="400px";
-			bg4.style.paddingLeft ="0px";
-			titleD.style.color = "black";
+			bg4.style.paddingLeft ="100px";
 			menuD.style.fontSize = "2em";
 ;
 		}else{
 			sectionD.style.backgroundAttachment = "scroll";
 			bg3.style.paddingLeft ="40px";
-			bg4.style.paddingLeft ="1500px";
-			titleD.style.color = "black";
+			bg4.style.paddingLeft ="900px";
 			menuD.style.fontSize = "1.5em";
 		}
 		if(scrollH > 3200){
