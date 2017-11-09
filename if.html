@@ -1,4 +1,3 @@
-
 <idoctype html>
 <head>
 	<meta charset = "utf-8">
@@ -7,147 +6,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="scrollByAnimated.js"></script>
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-		html { font-family: 'Roboto Slab', serif; 
-		font-weight: 200; }
-		.section{
-			height:900px;
-			position: relative; 
-			margin:0 auto;
-			padding: 0;}
-		header{
-			height:900px; 
-			background: black;
-			width:100%; 
-			transition: all 0.3s}
-		header #logo{
-			width:300px;
-			padding-top: 30px;
-			padding-bottom: 100px;
-			position:relative;
-			left:calc(50% - 100px);
-			transition: all 0.3s; }
-		header img{ 
-			width: 78%; 
-			margin-top: 10px; }
-		header #menu{
-			width:100%;
-			height:100px;
-			font-size: 1.2em;
-			position:relative;
-			border-radius: 50px;
-			left:calc(50% - 80px);
-			transition: all 0.3s;
-			margin-top: 0px; 
-			cursor:pointer;}
-		header #menu li:hover{
-			color: white;}
-		header li{
-			width:200px;
-			height:50px;
-			color:#DAA520;
-			background: none;
-			float:left;
-			text-align: center;
-			line-height: 20px;
-			font-size: 1.2em;
-			margin-left: 0px;
-			margin-right:calc(100% - 300px);
-			transition: all 0.5s;}
-		h1{
-			color:white;
-			font-size: 1.2em;
-			font-weight: 100;
-			padding-top:80px; 
-			line-height: 1.7;
-			padding-left: 600px;
-			padding-right: 100px;
-			transition: all 3s;}
-
-		.balloon{ 
-			width:70px; height:400px; 
-			/*background: url('./green.png');*/
-			/*background-size:100% auto;*/
-			background-repeat:no-repeat;
-			animation: bMove 8s linear;
-		}
-		@keyframes bMove{
-			0%{ background-position: 0 300px; opacity:0;}
-			30%{opacity:0;}
-			40%{opacity:1;}
-			80%{ opacity:1;}
-			100%{ background-position:0 0;opacity:0;}
-		}
-
-
-		#sectionA{ 
-			background: url('./main.jpg');
-			background-size: 100% auto ;
-			background-position: center;
-			background-repeat: no-repeat;
-			transition: all 3s;}
-		#sectionB{
-			background: url('./011b.png');
-			background-size:100%; 
-			background-repeat: no-repeat;
-			position: relative;
-			margin-top: 0px ; 
-			padding-top: 0px;
-			transition: all 3s;}
-		#sectionC{ 
-			background: url('./021b.png');
-			background-size:100% auto ; 
-			background-repeat: no-repeat;
-			margin: 0 auto; 
-			padding-top:100px;
-			transition: all 1s;}
-
-		#sectionD{ 
-			background: url('./031b.png');
-			background-size:100% auto ; 
-			background-repeat: no-repeat;
-			transition: all 4s;}
-		#bg3{
-			width:800px;
-			padding:0; 
-			margin: 100 -100px;
-			position: relative;
-			transition: all 3s;
-		}
-		#bg4{
-			width:800px; 
-			padding:0; 
-			margin: -400 780px;
-			position: relative;
-			transition: all 4s;}
-		#sectionE{ 
-			background: url('./04.gif');
-			background-size:100% auto ; 
-			background-repeat: no-repeat;
-			margin: 0 auto; 
-			padding:0;
-			transition: all 4s;}
-		#sectionF{
-			background: url('./05.gif');
-			background-size:100% auto ; 
-			background-repeat: no-repeat;
-			margin: 0 auto; 
-			padding:0;
-			transition: all 1s;}
-		}
-		#titleA{transition: all 3s;}
-		#titleB{transition: all 1s;}
-		#titleC{transition: all 1s;}
-		#titleD{transition: all 5s;}
-		#titleE{transition: all 4s; }
-		#titleF{transition: all 2s;}
-	</style>
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
 <audio autoplay loop preload id="myaudio">
   <source src="bibidi.M4A">
  </audio>
+
 <header id="header">
 	<div id="logo"><img src="./logo.png"></div>
 	<div id="menu">
@@ -161,9 +27,11 @@
 		</ul>
 	</div>
 </header>
+
 <div class="section" id="sectionA">
 	<h1 id="titleA">Once upon a time, there was a kind girl named Cinderella.</h1>
 </div>
+
 <div class="section" id="sectionB">
 	<h1 id="titleB" style="white">All of the animals loved her, especially two mice named Gus and Jaq. They'd do anything for the girl they called Cinderelly.</h1>
 	<div id="bg1">
@@ -171,6 +39,7 @@
 	<div id="bg">
 		<img src="./011.png" style="padding-left: :0px; margin-left: 0; "></div>
 </div>
+
 <div class="section" id="sectionC">
 	<h1 id="titleC">
 		Her stepmother and her two stepsisters were very mean to Cinderella, <br>making her work all day cleaning, sewing, and cooking. <br>She tried her best to make them happy.
@@ -178,6 +47,7 @@
 	<div id="bg2">
 			<img src="./02.png" style="padding:0; margin: 0;"></div>
 </div>
+
 <div class="section" id="sectionD">
 	<h1 id="titleD">
 		They ripped the dress and pulled off the beads. Lady Tremaine didn't stop them. Cinderella's dream of going to the ball was through.
@@ -187,21 +57,20 @@
 		<div id="bg4">
 			<img src="./sister.png"></div>
 </div>
+
 <div class="section" id="sectionE" >
 	<h1 id="titleE" style="font-size: 2em" >"Bibbidi-bobbidi-boo!"</h1> 
 	<h1 id="titleE1" style="padding-left:800px">said the Fairy Godmother, waving her wand again. Cinderella was now wearing a beautiful gown and sparkling glass slippers.</h1>
 </div>
+
 <div class="section" id="sectionF" >
 	<h1 id="titleF" style="transition: 3s;padding-left:calc(100% - 600px);">The orchestra played, and the Prince began to dance with the wonderful girl. For Cinderella, the night was a dream come true.</h1>
 </div>
-<script>
-	$(document).ready(function(){
-    $("button").click(function(){
-        alert($("div").scrollTop() + " px");
-    });
-});
-	setInterval(attachBalloon,1000);
 
+//balloon
+
+<script>
+	setInterval(attachBalloon,1000);
 	function attachBalloon(){
 		var t = document.createElement("div"); 
 		t.setAttribute("class","balloon"); 
@@ -223,6 +92,9 @@
   		return Math.floor(Math.random() * (max - min + 1)) + min;
   	}
 	</script>
+
+//menu button
+
 <script>
 	window.onload = function(){window.scrollTo(0,0);}
 		
@@ -238,11 +110,13 @@
 			scrollByAnimated(distance, 250);
 		}
 </script>
+
+//section
+
 <script>
 	var audio = document.getElementById("myaudio");
   	audio.volume = 0.3;
   	
-
 	window.onscroll = function(){
 		console.log(document.body.scrollTop);
 		var scrollH = document.body.scrollTop;
@@ -301,7 +175,6 @@
 			bg4.style.paddingLeft ="200px";
 			menuD.style.fontSize = "1.6em";
 			titleD.style.opacity = "1";
-;
 		}else{
 			sectionD.style.backgroundAttachment = "scroll";
 			bg3.style.paddingLeft ="0px";
