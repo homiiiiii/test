@@ -1,211 +1,368 @@
 <idoctype html>
 <head>
-	<meta charset = "utf-8">
-	<link href='normalize.css' rel="stylesheet">
-	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="scrollByAnimated.js"></script>
-	<link rel="stylesheet" type="text/css" href="./style.css">
+<meta charset = "utf-8">
+<link href='normalize.css' rel="stylesheet">
+<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="scrollByAnimated.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+html { font-family: 'Roboto Slab', serif;
+font-weight: 200; }
+.section{
+height:1000px;
+position: relative;
+margin:0 auto;
+padding: 0;}
+header{
+height:900px;
+background: black;
+width:100%;
+transition: all 0.3s}
+header #logo{
+width:300px;
+padding-top: 30px;
+padding-bottom: 100px;
+position:relative;
+left:calc(50% - 100px);
+transition: all 0.3s; }
+header img{
+width: 78%;
+margin-top: 10px; }
+header #menu{
+width:100%;
+height:100px;
+font-size: 1.2em;
+position:relative;
+border-radius: 50px;
+left:calc(50% - 80px);
+transition: all 0.3s;
+margin-top: 0px;
+cursor:pointer;}
+header #menu li:hover{
+color: white;}
+header li{
+width:200px;
+height:50px;
+color:#DAA520;
+background: none;
+float:left;
+text-align: center;
+line-height: 20px;
+font-size: 1.2em;
+margin-left: 0px;
+margin-right:calc(100% - 300px);
+transition: all 0.5s;}
+h1{width: 50%;
+height: calc(100%-50px);
+color:white;
+font-size: 1.2em;
+font-weight: 100;
+padding-top:80px;
+line-height: 1.7;
+padding-left: 600px;
+padding-right: 100px;
+transition: all 3s;}
+ 
+.balloon{
+width:70px; height:400px;
+/*background: url('./green.png');*/
+/*background-size:100% auto;*/
+background-repeat:no-repeat;
+animation: bMove 8s linear;
+}
+@keyframes bMove{
+0%{ background-position: 0 300px; opacity:0;}
+30%{opacity:0;}
+40%{opacity:1;}
+80%{ opacity:1;}
+100%{ background-position:0 0;opacity:0;}
+}
+ 
+ 
+#sectionA{
+background: url('./main.jpg');
+background-size: 100% auto ;
+background-position: center;
+background-repeat: no-repeat;
+transition: all 3s;}
+#sectionB{
+background: url('./011b.png');
+background-size:100%;
+background-repeat: no-repeat;
+position: relative;
+margin-top: 0px ;
+padding-top: 0px;
+transition: all 3s;}
+#sectionC{
+background: url('./021b.png');
+background-size:100% ;
+background-repeat: no-repeat;
+margin: 0 auto;
+padding-top:100px;
+transition: all 1s;}
+ 
+#sectionD{
+background: url('./031b.png');
+background-size:100% auto ;
+background-repeat: no-repeat;
+transition: all 4s;}
+#bg3{
+width:1000px;
+padding:0;
+margin: 100 -100px;
+position: relative;
+transition: all 3s;
+}
+#bg4{
+width:1000px;
+padding:0;
+margin: -400 1000px;
+position: relative;
+transition: all 4s;}
+#bg5{
+width:800px;
+padding:0;
+margin: -90 400px;
+position: relative;
+transition: all 4s;}
+#bg6{
+width:800px;
+padding:0;
+margin: -800 0px;
+position: relative;
+transition: all 4s;}
+#sectionE{
+background: url('./015b.jpg');
+background-size:100% auto ;
+background-repeat: no-repeat;
+margin: 0 auto;
+padding:0;
+transition: all 4s;}
+#sectionF{
+background: url('./05.gif');
+background-size:100% auto ;
+background-repeat: no-repeat;
+margin: 0 auto;
+padding:0;
+transition: all 1s;}
+}
+ 
+#titleA{transition: all 3s;}
+#titleB{transition: all 1s;}
+#titleC{transition: all 1s;}
+#titleD{transition: all 5s;}
+#titleE{transition: all 4s;}
+#titleF{transition: all 2s;}
+ 
+</style>
 </head>
-
+ 
 <body>
 <audio autoplay loop preload id="myaudio">
-  <source src="bibidi.M4A">
- </audio>
-
+<source src="bibidi.M4A">
+</audio>
 <header id="header">
-	<div id="logo"><img src="./logo.png"></div>
-	<div id="menu">
-		<ul>
-			<li id="menuA">Cinderella</li>
-			<li id="menuB">scene #1</li>
-			<li id="menuC">scene #2</li>
-			<li id="menuD">scene #3</li>
-			<li id="menuE">scene #4</li>
-			<li id="menuF">scene #5</li>
-		</ul>
-	</div>
+<div id="logo"><img src="./logo.png"></div>
+<div id="menu">
+<ul>
+<li id="menuA">Cinderella</li>
+<li id="menuB">scene #1</li>
+<li id="menuC">scene #2</li>
+<li id="menuD">scene #3</li>
+<li id="menuE">scene #4</li>
+<li id="menuF">scene #5</li>
+ 
+</ul>
+</div>
 </header>
-
 <div class="section" id="sectionA">
-	<h1 id="titleA">Once upon a time, there was a kind girl named Cinderella.</h1>
+<h1 id="titleA">Once upon a time, there was a kind girl named Cinderella.</h1>
 </div>
-
 <div class="section" id="sectionB">
-	<h1 id="titleB" style="white">All of the animals loved her, especially two mice named Gus and Jaq. They'd do anything for the girl they called Cinderelly.</h1>
-	<div id="bg1">
-		<img src="./0111.png" style="height:200px;padding:0; margin-left: 800px"></div>
-	<div id="bg">
-		<img src="./011.png" style="padding-left: :0px; margin-left: 0; "></div>
+<h1 id="titleB" style="white">All of the animals loved her, especially two mice named Gus and Jaq. They'd do anything for the girl they called Cinderelly.</h1>
+<div id="bg1">
+<img src="./0111.png" style="height:200px;padding:0; margin-left: 800px"></div>
+<div id="bg">
+<img src="./011.png" style="padding-left: :0px; margin-left: 0; "></div>
 </div>
-
 <div class="section" id="sectionC">
-	<h1 id="titleC">
-		Her stepmother and her two stepsisters were very mean to Cinderella, <br>making her work all day cleaning, sewing, and cooking. <br>She tried her best to make them happy.
-	</h1>
-	<div id="bg2">
-			<img src="./02.png" style="padding:0; margin: 0;"></div>
+<h1 id="titleC">
+Her stepmother and her two stepsisters were very mean to Cinderella, <br>making her work all day cleaning, sewing, and cooking. <br>She tried her best to make them happy.
+</h1>
+<div id="bg2">
+<img src="./02.png" style="padding:0; margin: 0;"></div>
 </div>
-
 <div class="section" id="sectionD">
-	<h1 id="titleD">
-		They ripped the dress and pulled off the beads. Lady Tremaine didn't stop them. Cinderella's dream of going to the ball was through.
-	</h1>
-	<div id="bg3">
-			<img src="./mother.png"></div>
-		<div id="bg4">
-			<img src="./sister.png"></div>
+<h1 id="titleD">
+They ripped the dress and pulled off the beads. Lady Tremaine didn't stop them. Cinderella's dream of going to the ball was through.
+</h1>
+<div id="bg3">
+<img src="./mother.png"></div>
+<div id="bg4">
+<img src="./sister.png"></div>
 </div>
-
 <div class="section" id="sectionE" >
-	<h1 id="titleE" style="font-size: 2em" >"Bibbidi-bobbidi-boo!"</h1> 
-	<h1 id="titleE1" style="padding-left:800px">said the Fairy Godmother, waving her wand again. Cinderella was now wearing a beautiful gown and sparkling glass slippers.</h1>
+<h1 id="titleE" style="font-size: 2em" >"Bibbidi-bobbidi-boo!"</h1>
+<h1 id="titleE1" style="padding-left:800px">said the Fairy Godmother, waving her wand again. Cinderella was now wearing a beautiful gown and sparkling glass slippers.</h1>
+<div id="bg5">
+<img src="./grand.png" style="height:700px;padding:0; margin-left: 800px"></div>
+<div id="bg6">
+<img src="./car.png" style="padding-left: :0px; margin-left: 0; "></div>
 </div>
-
 <div class="section" id="sectionF" >
-	<h1 id="titleF" style="transition: 3s;padding-left:calc(100% - 600px);">The orchestra played, and the Prince began to dance with the wonderful girl. For Cinderella, the night was a dream come true.</h1>
+<h1 id="titleF" style="transition: 3s;padding-left:calc(100% - 600px);">The orchestra played, and the Prince began to dance with the wonderful girl. For Cinderella, the night was a dream come true.</h1>
 </div>
-
-//balloon
-
+ 
+ 
 <script>
-	setInterval(attachBalloon,1000);
-	function attachBalloon(){
-		var t = document.createElement("div"); 
-		t.setAttribute("class","balloon"); 
-		t.style.position = "absolute";
-		t.style.background = "url('./green_" + randomBH(1,4) + ".png') no-repeat";
-		t.style.backgroundSize = "100% auto";
-		t.style.top = randomBH(0,window.innerHeight) + "px";
-		t.style.left = randomBH(0,window.innerWidth) + "px";
-		t.addEventListener("animationend",remove);
-		document.body.appendChild(t); 
-	}
-	function remove(){
-		var t = event.target; 
-		t.parentNode.removeChild(t); 
-		}
-	function randomBH(min, max) {
-  		min = Math.ceil(min);
-  		max = Math.floor(max);
-  		return Math.floor(Math.random() * (max - min + 1)) + min;
-  	}
-	</script>
-
-//menu button
-
-<script>
-	window.onload = function(){window.scrollTo(0,0);}
-		
-		logo.onclick = function(){ aniScroll(0); }
-		menuA.onclick = function(){ aniScroll(110); }
-		menuB.onclick = function(){ aniScroll(1000); }
-		menuC.onclick = function(){ aniScroll(1970); }
-		menuD.onclick = function(){ aniScroll(2900); }
-		menuE.onclick = function(){ aniScroll(3760); }
-		menuF.onclick = function(){ aniScroll(4716); }
-		function aniScroll(destination){
-			var distance = destination - document.body.scrollTop;
-			scrollByAnimated(distance, 250);
-		}
+$(document).ready(function(){
+$("button").click(function(){
+alert($("div").scrollTop() + " px");
+});
+});
+setInterval(attachBalloon,1000);
+ 
+function attachBalloon(){
+var t = document.createElement("div");
+t.setAttribute("class","balloon");
+t.style.position = "absolute";
+t.style.background = "url('./green_" + randomBH(1,4) + ".png') no-repeat";
+t.style.backgroundSize = "100% auto";
+t.style.top = randomBH(0,window.innerHeight) + "px";
+t.style.left = randomBH(0,window.innerWidth) + "px";
+t.addEventListener("animationend",remove);
+document.body.appendChild(t);
+}
+function remove(){
+var t = event.target;
+t.parentNode.removeChild(t);
+}
+function randomBH(min, max) {
+min = Math.ceil(min);
+max = Math.floor(max);
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 </script>
-
-//section
-
 <script>
-	var audio = document.getElementById("myaudio");
-  	audio.volume = 0.3;
-  	
-	window.onscroll = function(){
-		console.log(document.body.scrollTop);
-		var scrollH = document.body.scrollTop;
-		if(scrollH > 50){
-			header.style.height = "0px";
-			header.style.position = "fixed";
-			header.style.top = "0px";
-			header.style.zIndex = "9999";
-			menu.style.left = "50px";
-			menu.style.top = "-40px";
-			menu.style.opacity = "1";
-			logo.style.left = "40px";
-			logo.style.top = "30px";
-			sectionA.style.marginTop = "100px";
-			sectionA.style.background = "1";
-		}else{
-			header.style.height = "900px";
-			header.style.position = "relative";
-			header.style.top = "0px";
-			logo.style.left = "calc(50% - 90px)";
-			menu.style.left = "calc(50% - 80px)";
-			menu.style.top = "40px";
-			sectionA.style.marginTop = "0px";
-			sectionA.style.background = "0.2";
-		}
-		if(scrollH > 90){
-			sectionA.style.backgroundAttachment = "fixed";
-			menuA.style.fontSize = "1.6em";
-			titleA.style.opacity = "1";
-		}else{
-			menuA.style.fontSize = "1.2em";
-			titleA.style.opacity = "0";
-		}
-		if(scrollH > 300){
-			sectionB.style.backgroundAttachment = "fixed";
-			menuB.style.fontSize = "1.6em";
-			titleB.style.opacity = "1";
-		}else{
-			sectionB.style.backgroundAttachment = "scroll";
-			menuB.style.fontSize = "1.2em";
-			titleB.style.opacity = "0";
-		}
-		if(scrollH > 1400){
-			sectionC.style.backgroundAttachment = "fixed";
-			bg2.style.position = "fixed";
-			menuC.style.fontSize = "1.6em";
-			titleC.style.opacity = "1";
-		}else{
-			sectionC.style.backgroundAttachment = "scroll";
-			menuC.style.fontSize = "1.2em";
-			titleC.style.opacity = "0";
-		}
-		if(scrollH > 2200){
-			sectionD.style.backgroundAttachment = "fixed";
-			bg3.style.paddingLeft ="500px";
-			bg4.style.paddingLeft ="200px";
-			menuD.style.fontSize = "1.6em";
-			titleD.style.opacity = "1";
-		}else{
-			sectionD.style.backgroundAttachment = "scroll";
-			bg3.style.paddingLeft ="0px";
-			bg4.style.paddingLeft ="100px";
-			menuD.style.fontSize = "1.2em";
-			titleD.style.opacity = "0";
-		}
-		if(scrollH > 3200){
-			sectionE.style.backgroundAttachment = "fixed";
-			menuE.style.fontSize = "1.6em";
-			titleE.style.opacity = "1";
-			titleE1.style.opacity = "1";
-		}else{
-			sectionE.style.backgroundAttachment = "scroll";
-			menuE.style.fontSize = "1.2em";
-			titleE.style.opacity = "0";
-			titleE1.style.opacity = "0";
-		}
-		if(scrollH > 4200){
-			sectionE.style.backgroundAttachment = "fixed";
-			menuF.style.fontSize = "1.6em";
-			titleF.style.fontWeight = "700";
-			titleF.style.color = "white";
-			titleF.style.opacity = "1";
-		}else{
-			sectionE.style.backgroundAttachment = "scroll";
-			menuF.style.fontSize = "1.2em";
-			titleF.style.fontWeight = "200";
-			titleF.style.color = "black";
-			titleF.style.opacity = "0";
-		}
-	}
+window.onload = function(){window.scrollTo(0,0);}
+logo.onclick = function(){ aniScroll(0); }
+menuA.onclick = function(){ aniScroll(110); }
+menuB.onclick = function(){ aniScroll(1088); }
+menuC.onclick = function(){ aniScroll(2100); }
+menuD.onclick = function(){ aniScroll(3180); }
+menuE.onclick = function(){ aniScroll(4200); }
+menuF.onclick = function(){ aniScroll(5360); }
+function aniScroll(destination){
+var distance = destination - document.body.scrollTop;
+scrollByAnimated(distance, 250);
+}
+</script>
+<script>
+var audio = document.getElementById("myaudio");
+audio.volume = 0.3;
+ 
+window.onscroll = function(){
+console.log(document.body.scrollTop);
+var scrollH = document.body.scrollTop;
+if(scrollH > 50){
+header.style.height = "0px";
+header.style.position = "fixed";
+header.style.top = "0px";
+header.style.zIndex = "9999";
+menu.style.left = "50px";
+menu.style.top = "-40px";
+menu.style.opacity = "1";
+logo.style.left = "40px";
+logo.style.top = "30px";
+sectionA.style.marginTop = "100px";
+sectionA.style.background = "1";
+}else{
+header.style.height = "900px";
+header.style.position = "relative";
+header.style.top = "0px";
+logo.style.left = "calc(50% - 90px)";
+menu.style.left = "calc(50% - 80px)";
+menu.style.top = "40px";
+sectionA.style.marginTop = "0px";
+sectionA.style.background = "0.2";
+}
+if(scrollH > 100){
+sectionA.style.backgroundAttachment = "fixed";
+menuA.style.fontSize = "1.6em";
+titleA.style.opacity = "1";
+}else{
+menuA.style.fontSize = "1.2em";
+titleA.style.opacity = "0";
+}
+if(scrollH > 900){
+sectionB.style.backgroundAttachment = "fixed";
+menuB.style.fontSize = "1.6em";
+titleB.style.opacity = "1";
+}else{
+sectionB.style.backgroundAttachment = "scroll";
+menuB.style.fontSize = "1.2em";
+titleB.style.opacity = "0";
+}
+if(scrollH > 1500){
+sectionC.style.backgroundAttachment = "fixed";
+bg2.style.position = "fixed";
+menuC.style.fontSize = "1.6em";
+titleC.style.opacity = "1";
+}else{
+sectionC.style.backgroundAttachment = "scroll";
+menuC.style.fontSize = "1.2em";
+titleC.style.opacity = "0";
+}
+if(scrollH > 2900){
+bg4.style.paddingLeft ="200px";
+}else{
+bg4.style.paddingLeft ="100px";
+}
+if(scrollH > 3000){
+sectionD.style.backgroundAttachment = "fixed";
+bg3.style.paddingLeft ="500px";
+menuD.style.fontSize = "1.6em";
+titleD.style.opacity = "1";
+}else{
+sectionD.style.backgroundAttachment = "scroll";
+bg3.style.paddingLeft ="0px";
+menuD.style.fontSize = "1.2em";
+titleD.style.opacity = "0";
+}
+if(scrollH > 4000){
+bg5.style.paddingLeft ="200px";
+}else{
+bg5.style.paddingLeft ="0px";
+}
+if(scrollH > 4000){
+sectionE.style.backgroundAttachment = "fixed";
+menuE.style.fontSize = "1.6em";
+bg6.style.opacity ="0.5";
+titleE.style.opacity = "1";
+titleE1.style.opacity = "1";
+}else{
+sectionE.style.backgroundAttachment = "scroll";
+menuE.style.fontSize = "1.2em";
+bg6.style.opacity ="0";
+titleE.style.opacity = "0";
+titleE1.style.opacity = "0";
+}
+ 
+if(scrollH > 5000){
+sectionF.style.backgroundAttachment = "fixed";
+menuF.style.fontSize = "1.6em";
+titleF.style.fontWeight = "700";
+titleF.style.color = "white";
+titleF.style.opacity = "1";
+}else{
+sectionF.style.backgroundAttachment = "scroll";
+menuF.style.fontSize = "1.2em";
+titleF.style.fontWeight = "200";
+titleF.style.color = "black";
+titleF.style.opacity = "0";
+}
+}
 </script>
 </body>
